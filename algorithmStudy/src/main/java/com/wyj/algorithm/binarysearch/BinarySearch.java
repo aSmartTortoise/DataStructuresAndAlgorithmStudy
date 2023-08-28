@@ -24,4 +24,22 @@ public class BinarySearch {
         }
         return -1;
     }
+
+    /**
+     *  定义的右指针j初始位置为arr.length，不只想数组中的元素，这样两个指针定义了一个左闭右开的查找范围。
+     */
+    public static int binarySearchAlternative(int[] arr, int target) {
+        int i = 0, j = arr.length ;
+        while (i < j) {
+            int m = (i + j) >>> 1;
+            if (target < arr[m]) {
+                j = m;
+            } else if (arr[m] < target) {
+                i = m + 1;
+            } else {
+                return m;
+            }
+        }
+        return -1;
+    }
 }
