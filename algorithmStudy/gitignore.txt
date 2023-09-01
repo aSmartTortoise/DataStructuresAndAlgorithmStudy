@@ -1,14 +1,14 @@
-# Built application ÎÄ¼ş
+# Built application ï¿½Ä¼ï¿½
 *.apk
 *.ap_
 
-# ART/Dalvik VM ÎÄ¼ş
+# ART/Dalvik VM ï¿½Ä¼ï¿½
 *.dex
 
-# Java class ÎÄ¼ş
+# Java class ï¿½Ä¼ï¿½
 *.class
 
-# Generated ÎÄ¼ş¼Ğ
+# Generated ï¿½Ä¼ï¿½ï¿½ï¿½
 bin/
 gen/
 out/
@@ -17,23 +17,24 @@ out/
 # Gradle files
 .gradle/
 build/
+target/
 
-# ±¾µØÅäÖÃÎÄ¼ş (sdk path, etc)
+# ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ (sdk path, etc)
 local.properties
 
-# EclipseÉú³ÉµÄProguardÎÄ¼ş¼Ğ
+# Eclipseï¿½ï¿½ï¿½Éµï¿½Proguardï¿½Ä¼ï¿½ï¿½ï¿½
 proguard/
 
-# ÈÕÖ¾ÎÄ¼ş
+# ï¿½ï¿½Ö¾ï¿½Ä¼ï¿½
 *.log
 
-# Android Studioµ¼º½±à¼­Æ÷ÁÙÊ±ÎÄ¼ş
+# Android Studioï¿½ï¿½ï¿½ï¿½ï¿½à¼­ï¿½ï¿½ï¿½ï¿½Ê±ï¿½Ä¼ï¿½
 .navigation/
 
 # Android Studio captures folder
 captures/
 
-# IntelliJ (IDEÅäÖÃÎÄ¼ş)
+# IntelliJ (IDEï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½)
 *.iml
 .idea/workspace.xml
 .idea/tasks.xml
@@ -43,13 +44,13 @@ captures/
 .idea/libraries
 .idea/caches
 
-# ÃÜÔ¿´¢´æ¿âÎÄ¼ş
-# Èç¹ûÄú²»Ïë¼ì²éÃÜÔ¿¿âÎÄ¼ş£¬ÇëÈ¡Ïû×¢ÊÍÒÔÏÂĞĞ
+# ï¿½ï¿½Ô¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½
+# ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¿ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 #*.jks
 
-# ÔÚAndroid Studio 2.2¼°¸ü¸ß°æ±¾ÖĞÉú³ÉµÄÍâ²¿Ô­Éú¹¹½¨ÎÄ¼ş¼Ğ
+# ï¿½ï¿½Android Studio 2.2ï¿½ï¿½ï¿½ï¿½ï¿½ß°æ±¾ï¿½ï¿½ï¿½ï¿½ï¿½Éµï¿½ï¿½â²¿Ô­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½
 .externalNativeBuild
 
-# Google·şÎñ (e.g. APIs or Firebase)
+# Googleï¿½ï¿½ï¿½ï¿½ (e.g. APIs or Firebase)
 google-services.json
 
