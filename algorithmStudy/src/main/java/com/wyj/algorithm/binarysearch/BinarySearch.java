@@ -119,13 +119,13 @@ public class BinarySearch {
 
     /**
      *  查找数组中大于等于目标元素的最小的索引
-     *  用于获取指定元素的排名、前任、后任、最近邻居
+     *  用于获取指定元素的排名、前任、最近邻居
      */
     public static int binarySearchBasicLeftMost1(int[] arr, int target) {
         int i = 0, j = arr.length - 1 ;
         while (i <= j) {
             int m = (i + j) >>> 1;
-            if (arr[m] >= target) {
+            if (target <= arr[m]) {
                 j = m - 1;
             } else {
                 i = m + 1;
@@ -136,7 +136,7 @@ public class BinarySearch {
 
     /**
      *  查找数组中小于等于目标元素的最大的索引
-     *  用于获取指定元素的排名、前任、后任、最近邻居
+     *  用于获取指定元素的排名、后任、最近邻居
      */
     public static int binarySearchBasicRightMost1(int[] arr, int target) {
         int i = 0, j = arr.length - 1 ;
