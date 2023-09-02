@@ -8,7 +8,7 @@ import java.util.stream.IntStream;
 public class DynamicArray implements Iterable<Integer>{
     private int size;
     private int capacity = 8;
-    private int[] array = new int[capacity];
+    private int[] array = {};
 
     public void addLast(int element) {
 //        array[size] = element;
@@ -21,6 +21,8 @@ public class DynamicArray implements Iterable<Integer>{
             throw new IllegalArgumentException("index is illegal.");
         }
 
+        checkAndGrow();
+
         if (index < size) {
             System.arraycopy(array, index, array, index + 1, size - index);
         }
@@ -29,12 +31,25 @@ public class DynamicArray implements Iterable<Integer>{
         size++;
     }
 
+    private void checkAndGrow() {
+        if (size == 0) {
+            array = new int[capacity];
+        } else if (size == capacity) {//需要扩容 1.5、1.618、2
+            capacity += capacity >> 1;//扩容为原来的1.5倍。
+            int[] newArray = new int[capacity];
+            System.arraycopy(array, 0, newArray, 0, size);
+            array = newArray;
+        }
+    }
+
     public int remove(int index) {
         if (index < 0 || index > size) {
             throw new ArrayIndexOutOfBoundsException("index is illegal.");
         }
         int removed = array[index];
-        System.arraycopy(array, index + 1, array, index, size - index - 1);
+        if (index < size - 1) {
+            System.arraycopy(array, index + 1, array, index, size - index - 1);
+        }
         size--;
         return removed;
     }
