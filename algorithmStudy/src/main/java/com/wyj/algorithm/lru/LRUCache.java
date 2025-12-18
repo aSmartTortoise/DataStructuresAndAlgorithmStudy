@@ -5,7 +5,7 @@ import java.util.LinkedList;
 
 /**
  *  设计或构建一个“最近最少使用的缓存”，缓存从键映射到值，并在初始化时指定容量，当缓存被填满时，它
- *  应该删除最近最少使用的项目，它支持以下操作：获取数据的get和写入数据的put。
+ *  应该删除最近最少使用的元素，它支持以下操作：获取数据的get和写入数据的put。
  *  思路：使用LinkedList + HashMap。LinkedList用来保存key的访问情况，最近访问的key放置到链表的最尾端。
  *      获取数据get：如果key在缓存中存在，则获取HashMap中key映射的value，LinkedList将key放置到链表的最尾端。如果key在缓存中
  *      不存在，则返回默认值。

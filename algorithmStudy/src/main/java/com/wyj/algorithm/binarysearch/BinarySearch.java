@@ -7,12 +7,15 @@ import java.util.Arrays;
  */
 public class BinarySearch {
     /**
-     *
+     * 二分查找基础版
      * @param arr 待查找的升序数组
      * @param target 待查找的目标值
      * @return 找到则返回索引，找不到返回-1
      *
      * 时间复杂度为 O(logn)，空间复杂度为O(1)
+     * 通过i和j指针定义了数组的查找范围，i和j指针指向的元素都产于比较。
+     * 取i和j的中间索引m不使用 i + j / 2，而是使用(i + j) >>> 1，这样避免了整型溢出的问题:i和j都是一个
+     * 很大的整数的场景。
      */
     public static int binarySearchBasic(int[] arr, int target) {
         int i = 0, j = arr.length - 1 ;
@@ -29,8 +32,9 @@ public class BinarySearch {
         return -1;
     }
 
-    /**
-     *  定义的右指针j初始位置为arr.length，不只想数组中的元素，这样两个指针定义了一个左闭右开的查找范围。
+    /** 二分查找改动版
+     *  定义的右指针j初始位置为arr.length，不指向数组中的元素，这样两个指针定义了一个左闭右开的查找范围。
+     *  j指针指向的元素不参与比较
      */
     public static int binarySearchAlternative(int[] arr, int target) {
         int i = 0, j = arr.length ;
@@ -78,7 +82,7 @@ public class BinarySearch {
     }
 
     /**
-     *  数组中有相等元素的情况，获取数组中目标元素在数组中的最小索引。
+     *  数组中有相等元素的情况，获取目标值在数组中的最小索引。
      */
     public static int binarySearchBasicLeftMost(int[] arr, int target) {
         int i = 0, j = arr.length - 1 ;
@@ -98,7 +102,7 @@ public class BinarySearch {
     }
 
     /**
-     *  数组中有相等元素的情况，获取数组中目标元素在数组中的最大索引。
+     *  数组中有相等元素的情况，获取目标值在数组中的最大索引。
      */
     public static int binarySearchBasicRightMost(int[] arr, int target) {
         int i = 0, j = arr.length - 1 ;
@@ -118,7 +122,7 @@ public class BinarySearch {
     }
 
     /**
-     *  查找数组中大于等于目标元素的最小的索引
+     *  查找数组中大于等于目标值的最小的索引
      *  用于获取指定元素的排名、前任、最近邻居
      */
     public static int binarySearchBasicLeftMost1(int[] arr, int target) {
@@ -135,7 +139,7 @@ public class BinarySearch {
     }
 
     /**
-     *  查找数组中小于等于目标元素的最大的索引
+     *  查找数组中小于等于目标值的最大的索引
      *  用于获取指定元素的排名、后任、最近邻居
      */
     public static int binarySearchBasicRightMost1(int[] arr, int target) {

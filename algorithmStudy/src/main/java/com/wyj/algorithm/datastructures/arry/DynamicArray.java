@@ -5,10 +5,14 @@ import java.util.Iterator;
 import java.util.function.Consumer;
 import java.util.stream.IntStream;
 
+/**
+ * 动态数组
+ * https://www.bilibili.com/video/BV1Lv4y1e7HL?spm_id_from=333.788.player.switch&vd_source=7a19c934b34181e45c9e4b97735a0ed8&p=23
+ */
 public class DynamicArray implements Iterable<Integer>{
     private int size;
     private int capacity = 8;
-    private int[] array = {};
+    private int[] array = new int[capacity];
 
     public void addLast(int element) {
 //        array[size] = element;
