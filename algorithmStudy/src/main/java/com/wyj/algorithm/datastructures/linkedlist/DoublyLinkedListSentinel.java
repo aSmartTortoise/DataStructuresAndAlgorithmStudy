@@ -22,7 +22,7 @@ public class DoublyLinkedListSentinel implements Iterable<Integer>{
      */
     public DoublyLinkedListSentinel() {
         head = new Node(null, -1, null);
-        tail = new Node(null, -1, null);
+        tail = new Node(null, -2, null);
         head.next = tail;
         tail.prev = head;
     }
