@@ -57,6 +57,19 @@ public class SingleLinkedList implements Iterable<Integer>{
         }
     }
 
+    public void loop2(Consumer<Integer> before, Consumer<Integer> after) {
+        recursion(head, before, after);
+    }
+
+    private void recursion(Node node, Consumer<Integer> before, Consumer<Integer> after) {
+        if (node == null) {
+            return;
+        }
+        before.accept(node.value);
+        recursion(node.next, before, after);
+        after.accept(node.value);
+    }
+
     public int get(int index) {
         Node node = findNode(index);
         if (node == null) {
